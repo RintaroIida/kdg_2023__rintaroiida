@@ -1,0 +1,28 @@
+{% extends "blog/base.html" %}{% block content %}
+<p class="a-1">↓憧れのデスク周りを作ろう↓</p>
+{% for post in posts %}
+
+<body>
+    <main>
+<div class="post block">
+    <h2 class="subtitle">{{post.title}}</h2>
+    <p class="img"><img src="{{post.image.url}}" width="600" border="1"></p>
+    <small class="main">Posted at {{post.posted_date}}</small>
+    <a class="motto" href="{% url 'post_detail' post.slug %}">もっと読む</a>
+<hr>
+</main>
+</body>
+</div>
+{% endfor %}
+<footer>
+    <h2 id="mailed">----------お知らせ----------</h2>
+    <hr>
+        <p class="mail">31/JAN/2024  __:__  1月31日サイトがオープン！応援ありがとうございました！</p>
+    <hr>  
+        <p class="mail">31/JAN/2024  __:__  祝！！予定されていた全機能が搭載できました！！</p>
+    <hr>
+</footer>
+<footer2>
+    <p class="footer">@Desk blog</p>
+</footer2>
+{% endblock %}
